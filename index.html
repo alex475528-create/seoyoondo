@@ -1,28 +1,92 @@
 <!doctype html>
-<html lang="en">
-<head>
+<html lang="en"><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="seoyoondo — Research interests">
-  <title>seoyoondo</title>
+  <meta name="description" content="seoyoondo, an undergraduate student at Kwangwoon University. Research interests in reverse engineering, malware analysis, and system security.">
+  <title>seoyoondo | Kwangwoon University</title>
   <style>
-    body { max-width: 720px; margin: 56px auto; padding: 0 24px; color: #24292f; background: #fff; font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
-    h1 { margin: 0 0 32px; padding-bottom: 12px; border-bottom: 1px solid #d8dee4; font-size: 28px; font-weight: 600; }
-    h2 { margin: 0 0 12px; font-size: 20px; font-weight: 600; }
-    ul { margin: 0; padding-left: 24px; }
-    li + li { margin-top: 4px; }
-    @media (max-width: 600px) { body { margin-top: 32px; } }
+    :root { color-scheme: light; --text: #333; --muted: #6b7280; --link: #267cb9; --line: #e5e7eb; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body { margin: 0; color: var(--text); background: #fff; font: 15px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
+    a { color: var(--link); text-decoration: none; text-underline-offset: 3px; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
+    .page { display: grid; grid-template-columns: 245px minmax(0, 1fr); gap: 68px; max-width: 1080px; margin: 66px auto; padding: 0 32px; }
+    .profile { align-self: start; position: sticky; top: 38px; }
+    h1 { margin: 0 0 2px; color: #222; font-size: 30px; line-height: 1.3; font-weight: 600; letter-spacing: -.6px; }
+    .name-ko { margin: 0 0 22px; color: var(--muted); font-size: 14px; }
+    .role { margin: 0 0 5px; font-weight: 500; }
+    .affiliation { margin: 0; color: #555; font-size: 14px; line-height: 1.8; }
+    .links { list-style: none; margin: 23px 0 0; padding: 20px 0 0; border-top: 1px solid var(--line); font-size: 13px; }
+    .links li + li { margin-top: 9px; }
+    .links a { display: inline-flex; align-items: center; gap: 9px; overflow-wrap: anywhere; }
+    .links svg { width: 15px; height: 15px; flex-shrink: 0; fill: currentColor; }
+    nav { display: flex; flex-wrap: wrap; gap: 21px; margin: 0 0 37px; padding: 0 0 14px; border-bottom: 1px solid var(--line); font-size: 13px; }
+    nav a { color: #666; }
+    section + section { margin-top: 37px; }
+    h2 { margin: 0 0 15px; color: #222; font-size: 22px; line-height: 1.4; font-weight: 600; letter-spacing: -.25px; }
+    p { margin: 0 0 15px; }
+    .interests { margin: 0; padding-left: 20px; }
+    .interests li { padding-left: 3px; }
+    .interests li + li { margin-top: 14px; }
+    .interests strong { display: block; color: #333; font-weight: 600; }
+    .interests span { display: block; margin-top: 2px; color: #666; font-size: 14px; }
+    .education { padding-left: 17px; border-left: 2px solid var(--line); }
+    .education h3 { margin: 0 0 2px; color: #333; font-size: 16px; font-weight: 600; }
+    .education p { margin: 0; font-size: 14px; color: #555; }
+    .education .status { margin-top: 5px; color: var(--muted); font-size: 13px; }
+    @media (max-width: 780px) {
+      .page { grid-template-columns: 205px minmax(0, 1fr); gap: 35px; margin-top: 45px; padding: 0 25px; }
+      h1 { font-size: 27px; }
+      .links { font-size: 12px; }
+    }
+    @media (max-width: 620px) {
+      .page { grid-template-columns: 1fr; gap: 35px; margin: 32px auto 45px; padding: 0 24px; }
+      .profile { position: static; }
+      h1 { font-size: 29px; }
+      .name-ko { margin-bottom: 15px; }
+      .links { margin-top: 18px; padding-top: 15px; font-size: 13px; }
+      nav { margin-bottom: 27px; gap: 20px; }
+      section + section { margin-top: 30px; }
+      h2 { font-size: 21px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
 </head>
 <body>
-  <main>
-    <h1>seoyoondo</h1>
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Reverse Engineering</li>
-      <li>Malware Analysis</li>
-      <li>System Security</li>
-    </ul>
-  </main>
-</body>
-</html>
+  <div class="page">
+    <aside class="profile" aria-label="Profile and contact">
+      <h1>seoyoondo</h1>
+      <p class="name-ko" lang="ko">서윤도</p>
+      <p class="role">Undergraduate Student</p>
+      <p class="affiliation">School of Software<br><a href="https://www.kw.ac.kr/en/">Kwangwoon University</a></p>
+      <ul class="links">
+        <li><a href="mailto:alex475528@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path></svg>alex475528@gmail.com</a></li>
+        <li><a href="https://github.com/alex475528-create"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .8a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.55v-2.12c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.16 1.18a10.98 10.98 0 0 1 5.76 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.58.24 2.75.12 3.04.74.8 1.18 1.82 1.18 3.08 0 4.42-2.69 5.4-5.26 5.68.42.36.78 1.06.78 2.15v3.13c0 .31.21.66.79.55A11.5 11.5 0 0 0 12 .8z"></path></svg>GitHub</a></li>
+      </ul>
+    </aside>
+    <main>
+      <nav aria-label="Page navigation"><a href="#about">About</a><a href="#research">Research Interests</a><a href="#education">Education</a></nav>
+      <section id="about" aria-labelledby="about-title">
+        <h2 id="about-title">About Me</h2>
+        <p>I am an undergraduate student in the School of Software at Kwangwoon University.</p>
+        <p>My interests include reverse engineering, malware analysis, and system security. I am interested in understanding program behavior and analyzing how security vulnerabilities arise in software and operating systems.</p>
+      </section>
+      <section id="research" aria-labelledby="research-title">
+        <h2 id="research-title">Research Interests</h2>
+        <ul class="interests">
+          <li><strong>Reverse Engineering</strong><span>Program structure, binary analysis, and debugging.</span></li>
+          <li><strong>Malware Analysis</strong><span>Malicious software behavior and static and dynamic analysis.</span></li>
+          <li><strong>System Security</strong><span>Software vulnerabilities, operating system security, and attack and defense mechanisms.</span></li>
+        </ul>
+      </section>
+      <section id="education" aria-labelledby="education-title">
+        <h2 id="education-title">Education</h2>
+        <div class="education"><h3>Kwangwoon University</h3><p>School of Software</p><p class="status">Undergraduate studies · In progress</p></div>
+      </section>
+    </main>
+  </div>
+
+
+</body><div id="codex-browser-sidebar-comments-root" style="position: fixed; inset: 0px; pointer-events: none; z-index: 2147483647;"></div></html>
